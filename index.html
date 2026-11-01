@@ -126,6 +126,11 @@ header.scrolled{border-bottom-color:var(--line)}
 .about .eyebrow{color:var(--amber)}
 .about p{color:#C9D6E4;font-size:17px;margin-bottom:16px}
 .about h2{color:#fff}
+.about .roles{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}
+.about .roles span{font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.about .quote{margin:22px 0 18px;padding:18px 22px;border-left:4px solid var(--orange);background:rgba(255,255,255,.06);border-radius:0 14px 14px 0;color:#fff;font-size:18px;font-weight:600;line-height:1.5;font-style:italic}
+.about-grid{align-items:start}
+@media(min-width:861px){.about-photo{position:sticky;top:100px}}
 .about .sig{font-weight:700;color:#fff;margin-top:8px}
 .about .sig span{display:block;font-weight:500;color:#9FB3C8;font-size:14px}
 @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}.about-photo{max-width:300px}}
@@ -267,13 +272,16 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div class="about-photo reveal" role="img" aria-label="Yuzzy, Team Leader of Assurgent Team"></div>
+    <div class="about-photo reveal" role="img" aria-label="Yusuf Adebayo (Yuzzy), Team Leader of Assurgent Team"></div>
     <div class="reveal">
-      <span class="eyebrow">Who we are</span>
-      <h2>A team that rises together.</h2>
-      <p>Assurgent Team is a community of freelancers and entrepreneurs who learn, work and grow side by side. Members share what works, support each other through the hard parts, and celebrate every win together.</p>
-      <p>The team is led by <strong style="color:#fff">Yuzzy</strong>, a LAUTECH student and Fiverr freelancer who serves clients worldwide with technical work such as 3D printer firmware and research writing. His focus is simple: give every member a clear plan and a team that lifts the next person up.</p>
-      <p class="sig">Bolaji Gbolahan Abdulqudus (Yuzzy)<span>Team Leader, Assurgent Team</span></p>
+      <span class="eyebrow">Meet the team leader</span>
+      <h2>Yusuf Adebayo (Yuzzy)</h2>
+      <div class="roles"><span>Computer Science student</span><span>Software developer</span><span>Researcher</span><span>Entrepreneur</span><span>Network marketing team leader</span></div>
+      <p>Yuzzy is an aspiring First-Class Computer Science student with a passion for technology, innovation, leadership and personal development. He is building his knowledge in software engineering, artificial intelligence, cybersecurity and emerging technologies, and develops practical digital solutions to real-world challenges.</p>
+      <p>As an entrepreneur, he helps researchers, engineers and global professionals strengthen their academic and professional profiles and pursue international career opportunities. As a network marketing team leader, he focuses on building teams, mentoring individuals and helping others discover opportunities for personal and financial growth.</p>
+      <p>He believes success is built through discipline, consistency, continuous learning and the willingness to take responsibility, and that is the culture he builds at Assurgent Team.</p>
+      <blockquote class="quote">Think beyond limitations. Build beyond expectations. Lead by example. Never stop becoming better.</blockquote>
+      <p class="sig">Yusuf Adebayo (Yuzzy)<span>Team Leader, Assurgent Team</span></p>
     </div>
   </div>
 </section>
