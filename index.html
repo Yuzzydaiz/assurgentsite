@@ -13,12 +13,14 @@
 <meta property="og:url" content="https://www.assurgent.team/">
 <meta property="og:title" content="Assurgent Team">
 <meta property="og:description" content="Earn as a freelancer, then use it to build your own business. Message us on WhatsApp to get started.">
-<meta property="og:image" content="https://www.assurgent.team/yuzzy-portrait.jpg">
+<meta property="og:image" content="https://www.assurgent.team/yuzzy-square.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/yuzzy-hero.jpg" imagesrcset="/yuzzy-hero-640.jpg 640w, /yuzzy-hero.jpg 1000w" imagesizes="(max-width: 860px) 100vw, 46vw">
+<link rel="preload" as="image" href="/work-hero.jpg" media="(min-width: 861px)">
+<link rel="preload" as="image" href="/work-wide.jpg" media="(min-width: 561px) and (max-width: 860px)">
+<link rel="preload" as="image" href="/work-square.jpg" media="(max-width: 560px)">
 <style>
 /* ---------- Tokens ---------- */
 :root{
@@ -80,7 +82,10 @@ p{max-width:64ch}
 .nav{display:flex;align-items:center;gap:32px;height:72px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.125rem;letter-spacing:-.01em;margin-right:auto}
 .brand img{width:34px;height:auto}
-.brand span{font-weight:500;color:var(--ink-3)}
+.brand .word{white-space:nowrap}
+.brand .assur{color:var(--blue)}
+.brand .gent{color:var(--orange)}
+.brand .team{color:var(--ink);font-weight:600;margin-left:.3em}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;font-weight:500;font-size:.975rem;color:var(--ink-2);padding:6px 0;background:linear-gradient(var(--ink),var(--ink)) left bottom/0 1.5px no-repeat;transition:background-size .25s var(--ease),color .2s}
 .nav-links a:hover{color:var(--ink);background-size:100% 1.5px}
@@ -98,25 +103,32 @@ p{max-width:64ch}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden}
-.hero-inner{display:grid;grid-template-columns:minmax(0,1fr) 46%;min-height:min(86vh,760px)}
-.hero-copy{align-self:center;padding:72px 56px 88px 0;max-width:600px;margin-left:max(var(--gutter),calc((100vw - var(--wrap))/2 + var(--gutter)));position:relative;z-index:2}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 46%;gap:56px;max-width:var(--wrap);margin:0 auto;padding:40px var(--gutter) 56px;min-height:min(86vh,760px)}
+.hero-copy{align-self:center;padding:24px 0 40px;max-width:600px;position:relative;z-index:2}
 .hero h1{font-size:var(--step-4);font-weight:800;letter-spacing:-.025em;line-height:1.04;margin-bottom:24px}
 .hero .lede{font-size:var(--step-1);line-height:1.55;color:var(--ink-2);max-width:34em;margin-bottom:36px}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .hero-note{margin-top:28px;font-size:var(--step--1);color:var(--ink-3)}
-.hero-photo{position:relative;margin:0;min-height:100%}
-.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 22%}
-.hero-photo figcaption{position:absolute;right:24px;bottom:22px;background:var(--paper);color:var(--ink);font-size:var(--step--1);line-height:1.35;padding:10px 14px;border-radius:6px}
+.hero-photo{position:relative;margin:0;min-height:560px;border-radius:6px;overflow:hidden}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  -webkit-mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%);mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%)}
+.hero-photo::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 16%,rgba(255,255,255,0) 32%)}
+.hero-photo figcaption{z-index:2;position:absolute;right:24px;bottom:22px;background:var(--paper);color:var(--ink);font-size:var(--step--1);line-height:1.35;padding:10px 14px;border-radius:6px}
 .hero-photo figcaption b{display:block;font-weight:700}
 .rise{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
 .rise path{fill:none;stroke:var(--orange);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .js .rise path{stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
 .js .rise.draw path{transition:stroke-dashoffset 1.6s cubic-bezier(.6,.05,.25,1) .25s;stroke-dashoffset:0}
 .js .rise.draw .head{transition-delay:1.65s;transition-duration:.35s}
+@media (max-width:560px){.hero .hero-photo{aspect-ratio:1/1}}
 @media (max-width:860px){
-  .hero-inner{grid-template-columns:1fr;min-height:0}
-  .hero-photo{order:-1;height:62vw;max-height:440px;min-height:280px}
-  .hero-photo img{object-position:40% 28%}
+  .hero-inner{grid-template-columns:1fr;gap:0;padding:0;min-height:0}
+  .hero-photo{order:-1;aspect-ratio:860/770;height:auto;min-height:0;border-radius:0}
+  .hero-photo img{object-position:50% 35%}
+  .hero-photo::before{-webkit-mask-image:linear-gradient(to right,#000 0%,transparent 22%);mask-image:linear-gradient(to right,#000 0%,transparent 22%)}
+  .hero-photo::after{background:linear-gradient(to right,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 22%)}
   .hero-photo figcaption{right:auto;left:var(--gutter);bottom:16px}
   .hero-copy{margin:0;padding:36px var(--gutter) 56px;max-width:none}
   .rise{display:none}
@@ -263,7 +275,7 @@ p{max-width:64ch}
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188">Assurgent <span>Team</span></a>
+    <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="team">Team</span></span></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links">
         <li><a href="#model">The 2-in-1 model</a></li>
@@ -292,17 +304,22 @@ p{max-width:64ch}
           Message us on WhatsApp</a>
         <a class="link" href="#model">See how the model works</a>
       </div>
-      <p class="hero-note">No experience needed. A phone, data and steady effort are enough to begin.</p>
+      <p class="hero-note">No experience or device needed. You can work on the devices at our office.</p>
     </div>
     <figure class="hero-photo">
-      <img src="/yuzzy-hero.jpg" srcset="/yuzzy-hero-640.jpg 640w, /yuzzy-hero.jpg 1000w" sizes="(max-width: 860px) 100vw, 46vw" alt="Yusuf Adebayo (Yuzzy), team leader of Assurgent Team" width="1000" height="1250" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 560px)" srcset="/work-square.jpg">
+        <source media="(max-width: 860px)" srcset="/work-wide.jpg">
+        <img src="/work-hero.jpg" alt="Yusuf Adebayo (Yuzzy) at a desk, showing his work on a laptop" width="1400" height="1750" fetchpriority="high">
+      </picture>
       <figcaption><b>Yusuf Adebayo (Yuzzy)</b>Team leader</figcaption>
     </figure>
-  </div>
   <svg class="rise" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-    <path class="line" d="M-20 588 C 320 584, 560 560, 720 455 S 905 215, 968 52"/>
-    <path class="head" d="M928 44 L970 51 L951 88"/>
+    <path class="line" d="M0 596 C 300 594, 470 580, 504 470 S 512 160, 516 58"/>
+    <path class="head" d="M498 84 L516 56 L534 84"/>
   </svg>
+  </div>
+
 </section>
 
 <section class="section section--mist" id="model" aria-labelledby="model-title">
@@ -315,9 +332,9 @@ p{max-width:64ch}
       <article class="path">
         <span class="path-tag">First: earn</span>
         <h3>Freelancing</h3>
-        <p>Sell a skill such as writing, design or tech support to clients around the world, from your phone or laptop.</p>
+        <p>Sell a skill such as writing, design or tech support to clients around the world, on your own device or at our office.</p>
         <ul>
-          <li>Choose a skill clients are already paying for</li>
+          <li>Learn a skill clients are already paying for</li>
           <li>Set up a Fiverr profile and gigs that get noticed</li>
           <li>Win and deliver your first orders properly</li>
           <li>Receive payments and withdraw them safely</li>
@@ -353,7 +370,7 @@ p{max-width:64ch}
     </div>
     <ol class="steps">
       <li class="step"><h3>Say hello</h3><p>Send a WhatsApp message with your name and what you'd like to achieve.</p></li>
-      <li class="step"><h3>Pick your skill</h3><p>We ask about your time, interests and goals, then help you choose a freelancing skill to start with.</p></li>
+      <li class="step"><h3>Learn a paying skill</h3><p>We teach you a freelancing skill that clients pay for, and show you exactly how to make money from it.</p></li>
       <li class="step"><h3>Start earning</h3><p>You set up on Fiverr and work towards your first orders, with someone to check in with as you go.</p></li>
       <li class="step"><h3>Build for the long run</h3><p>Once your freelancing is bringing in money, you put part of it into your network marketing business and grow your team for bigger earnings over time.</p></li>
     </ol>
@@ -363,7 +380,7 @@ p{max-width:64ch}
 <section class="section leader" id="leader" aria-labelledby="leader-title">
   <div class="wrap leader-grid">
     <figure class="leader-photo">
-      <img src="/yuzzy-portrait.jpg" alt="Portrait of Yusuf Adebayo (Yuzzy)" width="900" height="900" loading="lazy">
+      <img src="/yuzzy-square.jpg" alt="Portrait of Yusuf Adebayo (Yuzzy)" width="860" height="860" loading="lazy">
       <figcaption>Yusuf Adebayo (Yuzzy), team leader</figcaption>
     </figure>
     <div>
@@ -401,8 +418,8 @@ p{max-width:64ch}
       <a class="link wa-link" data-msg="Hi Assurgent Team, I have a question before joining." href="https://wa.me/2348100766324">Ask us on WhatsApp</a>
     </div>
     <div class="faq-list">
-      <details class="faq-item"><summary>Do I need any experience?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>No. Many members start as complete beginners. We help you choose a skill and learn it step by step.</p></div></details>
-      <details class="faq-item"><summary>What do I need to get started?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>A smartphone or laptop, an internet connection, and the willingness to learn and stay consistent.</p></div></details>
+      <details class="faq-item"><summary>Do I need any experience?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>No. Many members start as complete beginners. We teach you a skill that pays and guide you step by step on how to earn from it.</p></div></details>
+      <details class="faq-item"><summary>Do I need my own phone or laptop?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Just the willingness to learn and stay consistent. If you don't have a phone or laptop, you can work on the devices available at our office.</p></div></details>
       <details class="faq-item"><summary>How soon will I start earning?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>That depends on your skill, your effort and the time you put in. We don't promise specific earnings. We do promise clear guidance and support while you do the work.</p></div></details>
       <details class="faq-item"><summary>Why start with freelancing?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Growing a network marketing business has costs. Freelancing gives you your own income to cover them, so you don't need to borrow or spend your savings, and you keep earning while the business grows.</p></div></details>
       <details class="faq-item"><summary>Do I have to do both?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>The 2-in-1 model is how Assurgent Team works, and it's what we coach. Message us and we'll talk through how it fits your situation.</p></div></details>
@@ -415,7 +432,7 @@ p{max-width:64ch}
   <div class="wrap closing-inner">
     <div>
       <h2 id="closing-title">Ready to start earning and building?</h2>
-      <p>Tell us where you are now and where you'd like to be. We'll help you pick your first skill and plan the next steps.</p>
+      <p>Tell us where you are now and where you'd like to be. We'll show you the skill you'll learn and how you'll start earning from it.</p>
     </div>
     <a class="btn btn-primary wa-link" data-msg="Hi Assurgent Team, I'm ready to start. Can you help me with the first step?" href="https://wa.me/2348100766324">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
@@ -428,7 +445,7 @@ p{max-width:64ch}
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-row">
-      <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188">Assurgent <span>Team</span></a>
+      <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="team">Team</span></span></a>
       <a class="wa-link" data-msg="Hi Assurgent Team" href="https://wa.me/2348100766324">WhatsApp +234 810 076 6324</a>
       <span>&copy; <span id="year">2026</span> Assurgent Team</span>
     </div>
