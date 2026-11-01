@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Assurgent Team · Earn as a freelancer, build your own business</title>
-<meta name="description" content="Assurgent Team is a 2-in-1 business: learn a freelancing skill that pays you now, then use that income to build a network marketing business, with a team guiding you.">
+<meta name="description" content="Assurgent Team is a 2-in-1 business: learn a freelancing skill that pays now, then use that income to build a network marketing business for the long run.">
 <link rel="canonical" href="https://www.assurgent.team/">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -12,214 +12,247 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.assurgent.team/">
 <meta property="og:title" content="Assurgent Team">
-<meta property="og:description" content="Earn as a freelancer, then use it to build your own business. Message us on WhatsApp to get started.">
+<meta property="og:description" content="Earn as a freelancer. Use it to build your own business. Message us on WhatsApp to start.">
 <meta property="og:image" content="https://www.assurgent.team/yuzzy-square.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=fallback" rel="stylesheet">
 <link rel="preload" as="image" href="/work-hero.jpg" media="(min-width: 861px)">
 <link rel="preload" as="image" href="/work-wide.jpg" media="(min-width: 561px) and (max-width: 860px)">
 <link rel="preload" as="image" href="/work-square.jpg" media="(max-width: 560px)">
 <style>
-/* ---------- Tokens ---------- */
+/* =========================================================
+   Tokens: one typeface everywhere, brand blue/orange/navy
+   ========================================================= */
 :root{
-  --ink:#12263D;        /* navy from the logo wordmark */
-  --ink-2:#3C5068;      /* body text */
-  --ink-3:#6B7C8F;      /* quiet text */
-  --paper:#FFFFFF;
-  --mist:#EEF2F6;       /* cool neutral for alternating sections */
-  --line:#D6DEE7;
-  --blue:#0A66D8;       /* brand blue */
-  --blue-deep:#0850AA;
-  --orange:#F7931E;     /* brand orange: actions and the rising line only */
-  --orange-deep:#E07F0A;
+  --ink:#12263D;  --ink-2:#3C5068;  --ink-3:#6B7C8F;
+  --paper:#FFFFFF; --mist:#EEF2F6;  --line:#D6DEE7;
+  --blue:#0A66D8;  --orange:#F7931E; --orange-deep:#E07F0A;
   --wa:#1E9E52;
-
   --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-
-  --step--1:0.875rem;
-  --step-0:1.0625rem;
-  --step-1:1.25rem;
-  --step-2:1.625rem;
-  --step-3:clamp(1.75rem,1.2rem + 2vw,2.375rem);
-  --step-4:clamp(2.25rem,1.3rem + 3.6vw,3.6rem);
-
-  --wrap:1180px;
-  --gutter:clamp(20px,4vw,40px);
+  --t-sm:.9rem; --t-base:1.0625rem; --t-md:1.2rem; --t-lg:1.5rem;
+  --t-xl:clamp(1.7rem,1.2rem + 1.8vw,2.3rem);
+  --t-hero:clamp(2.2rem,1.3rem + 3.4vw,3.5rem);
+  --wrap:1180px; --gutter:clamp(20px,4vw,40px);
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);font-size:var(--step-0);line-height:1.6;color:var(--ink-2);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font);font-size:var(--t-base);line-height:1.6;color:var(--ink-2);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
-h1,h2,h3{color:var(--ink);font-weight:700;letter-spacing:-.015em;line-height:1.12}
-h2{font-size:var(--step-3);text-wrap:balance}
-h1{text-wrap:pretty}
-h3{font-size:var(--step-1);line-height:1.3}
-p{max-width:64ch}
+h1,h2,h3{font-family:var(--font);color:var(--ink);font-weight:700;letter-spacing:-.015em;line-height:1.12}
+h2{font-size:var(--t-xl);text-wrap:balance}
+h3{font-size:var(--t-md);line-height:1.3}
+p{max-width:60ch}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ---------- Buttons & links ---------- */
-.btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--font);padding:1rem 1.4rem;border-radius:8px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease)}
+/* Buttons & links */
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--font);padding:1rem 1.4rem;border-radius:8px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .25s var(--ease),box-shadow .25s var(--ease)}
 .btn svg{width:1.15em;height:1.15em;flex:none}
 .btn-primary{background:var(--orange);color:var(--ink)}
-.btn-primary:hover{background:var(--orange-deep)}
-.btn-primary:active{transform:translateY(1px)}
-.btn-quiet{color:var(--ink);border-color:var(--line);background:var(--paper)}
-.btn-quiet:hover{border-color:var(--ink)}
+.btn-primary:hover{background:var(--orange-deep);transform:translateY(-2px);box-shadow:0 8px 18px rgba(224,127,10,.28)}
+.btn-primary:active{transform:translateY(0);box-shadow:none}
 .link{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.22em;text-decoration-color:rgba(10,102,216,.35);transition:text-decoration-color .2s}
 .link:hover{text-decoration-color:var(--blue)}
 
-/* ---------- Header ---------- */
+/* Header */
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .25s}
 .site-header.is-scrolled{border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;gap:32px;height:72px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.125rem;letter-spacing:-.01em;margin-right:auto}
-.brand img{width:34px;height:auto}
+.nav{display:flex;align-items:center;gap:30px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.125rem;letter-spacing:-.01em;margin-right:auto}
+.brand img{width:34px;height:auto;transition:transform .4s var(--ease)}
+.brand:hover img{transform:rotate(-8deg) scale(1.06)}
 .brand .word{white-space:nowrap}
 .brand .assur{color:var(--blue)}
 .brand .gent{color:var(--orange)}
-.brand .team{color:var(--ink);font-weight:600;margin-left:.3em}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{text-decoration:none;font-weight:500;font-size:.975rem;color:var(--ink-2);padding:6px 0;background:linear-gradient(var(--ink),var(--ink)) left bottom/0 1.5px no-repeat;transition:background-size .25s var(--ease),color .2s}
-.nav-links a:hover{color:var(--ink);background-size:100% 1.5px}
+.brand .tm{color:var(--ink);font-weight:600;margin-left:.3em}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.97rem;color:var(--ink-2);padding:6px 0;background:linear-gradient(var(--orange),var(--orange)) left bottom/0 2px no-repeat;transition:background-size .3s var(--ease),color .2s}
+.nav-links a:hover{color:var(--ink);background-size:100% 2px}
 .nav .btn{padding:.7rem 1.05rem;font-size:.95rem}
 .menu-btn{display:none;background:none;border:0;width:44px;height:44px;margin-right:-10px;cursor:pointer;color:var(--ink)}
 .menu-btn svg{width:24px;height:24px}
 @media (max-width:900px){
   .nav{gap:12px}
-  .nav-links{display:none}
+  .nav-links,.nav .btn{display:none}
   .menu-btn{display:grid;place-items:center}
-  .nav .btn{display:none}
-  .nav-links.is-open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--gutter) 20px}
+  .nav-links.is-open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:6px var(--gutter) 18px;animation:drop .25s var(--ease)}
   .nav-links.is-open a{display:block;padding:14px 0;border-bottom:1px solid var(--mist);font-size:1.05rem;background:none}
 }
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero{position:relative;overflow:hidden}
-.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 46%;gap:56px;max-width:var(--wrap);margin:0 auto;padding:40px var(--gutter) 56px;min-height:min(86vh,760px)}
-.hero-copy{align-self:center;padding:24px 0 40px;max-width:600px;position:relative;z-index:2}
-.hero h1{font-size:var(--step-4);font-weight:800;letter-spacing:-.025em;line-height:1.04;margin-bottom:24px}
-.hero .lede{font-size:var(--step-1);line-height:1.55;color:var(--ink-2);max-width:34em;margin-bottom:36px}
+.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 46%;gap:56px;max-width:var(--wrap);margin:0 auto;padding:40px var(--gutter) 56px;min-height:min(84vh,740px)}
+.hero-copy{align-self:center;padding:24px 0 40px;max-width:560px;position:relative;z-index:2}
+.hero h1{font-size:var(--t-hero);font-weight:800;letter-spacing:-.025em;line-height:1.04;margin-bottom:20px}
+.hero .lede{font-size:var(--t-md);line-height:1.5;margin-bottom:30px}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.hero-note{margin-top:28px;font-size:var(--step--1);color:var(--ink-3)}
-.hero-photo{position:relative;margin:0;min-height:560px;border-radius:6px;overflow:hidden}
+.hero-note{margin-top:22px;font-size:var(--t-sm);color:var(--ink-3)}
+.hero-photo{position:relative;margin:0;min-height:540px;border-radius:6px;overflow:hidden}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
-.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-  -webkit-mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%);mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%)}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%);mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.6) 14%,transparent 32%)}
 .hero-photo::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 16%,rgba(255,255,255,0) 32%)}
-.hero-photo figcaption{z-index:2;position:absolute;right:24px;bottom:22px;background:var(--paper);color:var(--ink);font-size:var(--step--1);line-height:1.35;padding:10px 14px;border-radius:6px}
-.hero-photo figcaption b{display:block;font-weight:700}
+.hero-photo figcaption{position:absolute;z-index:2;right:20px;bottom:20px;background:var(--paper);color:var(--ink);font-size:var(--t-sm);line-height:1.35;padding:10px 14px;border-radius:6px}
+.hero-photo figcaption b{display:block}
 .rise{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
 .rise path{fill:none;stroke:var(--orange);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .js .rise path{stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
-.js .rise.draw path{transition:stroke-dashoffset 1.6s cubic-bezier(.6,.05,.25,1) .25s;stroke-dashoffset:0}
-.js .rise.draw .head{transition-delay:1.65s;transition-duration:.35s}
-@media (max-width:560px){.hero .hero-photo{aspect-ratio:1/1}}
+.js .rise.draw path{transition:stroke-dashoffset 1.6s cubic-bezier(.6,.05,.25,1) .35s;stroke-dashoffset:0}
+.js .rise.draw .head{transition-delay:1.75s;transition-duration:.35s}
+/* hero load sequence */
+.js .hero-copy > *{opacity:0;transform:translateY(14px)}
+.js .hero.ready .hero-copy > *{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .hero.ready .hero-copy > :nth-child(2){transition-delay:.1s}
+.js .hero.ready .hero-copy > :nth-child(3){transition-delay:.2s}
+.js .hero.ready .hero-copy > :nth-child(4){transition-delay:.3s}
+.js .hero-photo img{transform:scale(1.08);opacity:0}
+.js .hero.ready .hero-photo img{transform:scale(1);opacity:1;transition:transform 1.6s var(--ease),opacity .9s ease}
 @media (max-width:860px){
   .hero-inner{grid-template-columns:1fr;gap:0;padding:0;min-height:0}
-  .hero-photo{order:-1;aspect-ratio:860/770;height:auto;min-height:0;border-radius:0}
+  .hero-photo{order:-1;aspect-ratio:860/770;min-height:0;border-radius:0}
   .hero-photo img{object-position:50% 35%}
   .hero-photo::before{-webkit-mask-image:linear-gradient(to right,#000 0%,transparent 22%);mask-image:linear-gradient(to right,#000 0%,transparent 22%)}
   .hero-photo::after{background:linear-gradient(to right,rgba(255,255,255,.45) 0%,rgba(255,255,255,0) 22%)}
-  .hero-photo figcaption{right:auto;left:var(--gutter);bottom:16px}
-  .hero-copy{margin:0;padding:36px var(--gutter) 56px;max-width:none}
+  .hero-photo figcaption{right:auto;left:var(--gutter);bottom:14px}
+  .hero-copy{padding:32px var(--gutter) 48px;max-width:none}
   .rise{display:none}
 }
+@media (max-width:560px){.hero .hero-photo{aspect-ratio:1/1}}
 
-/* ---------- Section rhythm ---------- */
-.section{padding:clamp(72px,9vw,120px) 0}
+/* Platforms strip (moving) */
+.platforms{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);padding:18px 0;overflow:hidden}
+.platforms-row{display:flex;align-items:center;gap:22px}
+.platforms-label{flex:none;font-size:var(--t-sm);font-weight:600;color:var(--ink-3);padding-left:max(var(--gutter),calc((100vw - var(--wrap))/2 + var(--gutter)));background:var(--paper);position:relative;z-index:1;padding-right:18px;box-shadow:12px 0 14px var(--paper)}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.marquee ul{display:flex;flex:none;gap:14px;padding-right:14px;list-style:none;animation:slide 32s linear infinite}
+.marquee:hover ul{animation-play-state:paused}
+.marquee li{flex:none;display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);padding:8px 16px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+.marquee li i{width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.marquee li.pay i{background:var(--orange)}
+@keyframes slide{to{transform:translateX(-100%)}}
+@media (max-width:640px){.platforms-label{display:none}}
+
+/* Section rhythm */
+.section{padding:clamp(64px,8vw,104px) 0}
 .section--mist{background:var(--mist)}
-.section-head{max-width:640px;margin-bottom:clamp(36px,5vw,56px)}
-.section-head p{margin-top:14px;font-size:var(--step-1);line-height:1.5}
+.section-head{max-width:620px;margin-bottom:clamp(30px,4vw,48px)}
+.section-head p{margin-top:12px;font-size:var(--t-md);line-height:1.5}
 
-/* ---------- The 2-in-1 model ---------- */
-.paths{display:grid;grid-template-columns:1fr 150px 1fr;border-top:2px solid var(--ink)}
-.path{padding:36px 0 8px}
-.path-tag{display:inline-block;font-size:var(--step--1);font-weight:700;color:var(--blue);margin-bottom:10px}
-.path:last-child .path-tag{color:var(--orange-deep)}
-.path h3{font-size:var(--step-2);letter-spacing:-.015em;margin-bottom:12px}
-.path > p{margin-bottom:22px}
-.path ul{list-style:none}
-.path li{position:relative;padding:12px 0 12px 28px;border-bottom:1px solid var(--line)}
-.path li:first-child{border-top:1px solid var(--line)}
-.path li::before{content:"";position:absolute;left:2px;top:22px;width:12px;height:2px;background:var(--blue);transform:rotate(-30deg)}
-.path:last-child li::before{background:var(--orange)}
-.bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:36px 12px 0;text-align:center;font-size:var(--step--1);font-weight:600;color:var(--ink);line-height:1.35}
-.bridge svg{width:64px;height:24px;fill:none;stroke:var(--orange);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.model-why{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;margin-top:44px;padding:26px 30px;background:var(--paper);border-left:4px solid var(--orange)}
-.model-why p{max-width:62ch}
-.model-why b{color:var(--ink)}
+/* Scroll reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* 2-in-1 model */
+.model{display:grid;grid-template-columns:1fr 130px 1fr;border-top:2px solid var(--ink)}
+.part{padding:32px 0 0}
+.part-tag{display:inline-block;font-size:var(--t-sm);font-weight:700;color:var(--blue);margin-bottom:8px}
+.part--build .part-tag{color:var(--orange-deep)}
+.part h3{font-size:var(--t-lg);margin-bottom:8px}
+.part > p{margin-bottom:18px}
+.part ul{list-style:none}
+.part li{position:relative;padding:11px 0 11px 28px;border-top:1px solid var(--line)}
+.part li:last-child{border-bottom:1px solid var(--line)}
+.part li::before{content:"";position:absolute;left:2px;top:21px;width:12px;height:2px;background:var(--blue);transform:rotate(-30deg)}
+.part--build li::before{background:var(--orange)}
+.bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding-top:32px;text-align:center;font-size:var(--t-sm);font-weight:600;color:var(--ink)}
+.bridge svg{width:64px;height:24px;fill:none;stroke:var(--orange);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.js .bridge.in svg{animation:nudge 1.8s var(--ease) .6s 2}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+.model-note{margin-top:36px;padding:20px 24px;background:var(--paper);border-left:4px solid var(--orange)}
+.model-note b{color:var(--ink)}
 @media (max-width:860px){
-  .paths{grid-template-columns:1fr}
-  .bridge{flex-direction:row;justify-content:flex-start;padding:26px 0 0}
+  .model{grid-template-columns:1fr}
+  .bridge{flex-direction:row;justify-content:flex-start;padding:24px 0 0}
   .bridge svg{transform:rotate(90deg);width:40px}
-  .path + .bridge + .path{padding-top:20px}
-  .model-why{padding:22px 20px}
+  .js .bridge.in svg{animation:none}
+  .part--build{padding-top:16px}
 }
 
-/* ---------- Steps (a real sequence) ---------- */
-.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step;position:relative}
+/* Steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative;counter-reset:step}
 .steps::before{content:"";position:absolute;left:0;right:0;top:19px;height:2px;background:var(--line)}
 .steps::after{content:"";position:absolute;left:0;top:19px;height:2px;width:100%;background:var(--blue);transform-origin:left;transform:scaleX(var(--progress,1));transition:transform 1.4s var(--ease)}
-.js .steps:not(.is-visible){--progress:0}
-.step{position:relative;padding-right:28px}
-.step::before{counter-increment:step;content:counter(step);position:relative;z-index:1;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--blue);color:var(--blue);font-weight:700;margin-bottom:22px}
-.section--mist .step::before{background:var(--mist)}
-.step h3{margin-bottom:8px}
-.step p{font-size:.98rem}
+.js .steps:not(.in){--progress:0}
+.step{position:relative;padding-right:24px}
+.step::before{counter-increment:step;content:counter(step);position:relative;z-index:1;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--blue);color:var(--blue);font-weight:700;margin-bottom:18px;transition:background-color .3s,color .3s}
+.step:hover::before{background:var(--blue);color:#fff}
+.step h3{margin-bottom:4px}
+.step p{font-size:.97rem}
 @media (max-width:900px){
-  .steps{grid-template-columns:1fr;gap:30px}
+  .steps{grid-template-columns:1fr;gap:26px}
   .steps::before,.steps::after{left:19px;right:auto;top:0;bottom:0;width:2px;height:auto}
   .steps::after{transform-origin:top;transform:scaleY(var(--progress,1))}
-  .step{padding:0 0 0 64px}
+  .step{padding:0 0 0 62px}
   .step::before{position:absolute;left:0;top:-6px;margin:0}
 }
 
-/* ---------- Team leader ---------- */
-.leader{background:var(--ink);color:#C8D3E0}
-.leader-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,88px);align-items:start}
-.leader-photo{margin:0;position:sticky;top:104px}
-.leader-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
-.leader-photo figcaption{margin-top:14px;font-size:var(--step--1);color:#8FA2B8}
-.leader h2{color:#fff;margin-bottom:6px}
-.leader .role{color:#9FB2C7;font-size:var(--step-0);margin-bottom:28px;max-width:52ch}
-.leader p{margin-bottom:18px}
+/* Proof gallery: swipeable row */
+.proof-wrap{position:relative}
+.proof-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 14px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.proof-grid:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.shot{position:relative;flex:none;margin:0;height:440px;border-radius:10px;overflow:hidden;background:#1d1f22;scroll-snap-align:start;cursor:zoom-in;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.shot:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(18,38,61,.18)}
+.shot img{height:100%;width:auto;max-width:none;object-fit:cover}
+.shot figcaption{position:absolute;left:10px;bottom:10px;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--orange);padding:5px 10px;border-radius:4px}
+.proof-nav{position:absolute;top:calc(50% - 30px);width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--paper);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 16px rgba(18,38,61,.12);transition:transform .2s var(--ease),background-color .2s}
+.proof-nav:hover{transform:scale(1.08);background:var(--orange)}
+.proof-nav svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.proof-nav.prev{left:-20px}.proof-nav.next{right:-20px}
+.proof-note{margin-top:14px;font-size:var(--t-sm);color:var(--ink-3)}
+@media (max-width:860px){
+  .proof-grid{margin:0 calc(-1 * var(--gutter));padding:4px var(--gutter) 14px;scroll-padding:0 var(--gutter);scrollbar-width:none}
+  .proof-grid::-webkit-scrollbar{display:none}
+  .shot{height:380px}
+  .proof-nav{display:none}
+}
+.lightbox{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:rgba(10,20,34,.88);padding:24px;opacity:0;pointer-events:none;transition:opacity .25s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-height:88vh;max-width:min(92vw,560px);border-radius:8px;transform:scale(.96);transition:transform .3s var(--ease)}
+.lightbox.open img{transform:none}
+.lightbox button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:22px;cursor:pointer}
+
+/* Team */
+.team{background:var(--ink);color:#C8D3E0}
+.team h2,.team h3{color:#fff}
+.leader{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,80px);align-items:center;margin-bottom:clamp(56px,7vw,88px)}
+.leader-photo{margin:0;border-radius:6px;overflow:hidden}
+.leader-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .8s var(--ease)}
+.leader-photo:hover img{transform:scale(1.04)}
+.leader-tag{display:inline-block;font-size:var(--t-sm);font-weight:700;color:var(--ink);background:var(--orange);padding:4px 10px;border-radius:4px;margin-bottom:12px}
+.leader-name{font-size:var(--t-xl);color:#fff}
+.leader .role{color:#9FB2C7;margin:6px 0 20px}
+.leader p + p{margin-top:14px}
 .leader strong{color:#fff;font-weight:600}
-.creed{margin:36px 0 0;padding:28px 0 0;border-top:1px solid rgba(255,255,255,.16)}
-.creed p{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,1.1rem + 1.1vw,1.85rem);line-height:1.35;color:#fff;max-width:26em;margin:0}
-.creed footer{margin-top:14px;font-size:var(--step--1);color:#8FA2B8}
+.creed{margin-top:26px;padding-left:18px;border-left:3px solid var(--orange);color:#fff;font-size:var(--t-md);font-weight:600;line-height:1.45;max-width:30em}
+.members{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none}
+.member figure{margin:0}
+.member .pic{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:#1B3452}
+.member .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.member:hover .pic img{transform:scale(1.05)}
+.member.is-empty .pic{border:1px dashed rgba(255,255,255,.18);background:rgba(255,255,255,.03)}
+.member.is-empty .pic img{display:none}
+.member figcaption{margin-top:12px;line-height:1.35}
+.member figcaption b{display:block;color:#fff;font-weight:600}
+.member figcaption span{font-size:var(--t-sm);color:#8FA2B8}
+.member.is-empty figcaption{display:none}
 @media (max-width:860px){
-  .leader-grid{grid-template-columns:1fr}
-  .leader-photo{position:static;max-width:420px}
+  .leader{grid-template-columns:1fr}
+  .leader-photo{max-width:380px}
+  .members{grid-template-columns:repeat(2,1fr);gap:16px}
 }
 
-/* ---------- Expectations ---------- */
-.promises{display:grid;grid-template-columns:4fr 8fr;gap:clamp(32px,6vw,80px)}
-.promises dl{display:grid}
-.promise{display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:12px 40px;padding:26px 0;border-top:1px solid var(--line)}
-.promise:last-child{border-bottom:1px solid var(--line)}
-.promise dt{color:var(--ink);font-weight:700;font-size:var(--step-1);line-height:1.3}
-.promise dd{margin:0}
-@media (max-width:860px){
-  .promises{grid-template-columns:1fr}
-  .promise{grid-template-columns:1fr;gap:6px}
-}
-
-/* ---------- FAQ ---------- */
-.faq-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(32px,6vw,80px);align-items:start}
-.faq-side p{margin-top:14px}
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(30px,6vw,80px);align-items:start}
 .faq-side .link{display:inline-block;margin-top:14px}
 .faq-list{border-top:1px solid var(--line)}
 .faq-item{border-bottom:1px solid var(--line)}
-.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-weight:600;font-size:var(--step-1);color:var(--ink);line-height:1.35}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-weight:600;font-size:var(--t-md);color:var(--ink);transition:color .2s}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary:hover{color:var(--blue)}
 .faq-item .icon{flex:none;width:22px;height:22px;position:relative}
@@ -227,46 +260,39 @@ p{max-width:64ch}
 .faq-item .icon::after{transform:rotate(90deg)}
 .faq-item[open] .icon::after{transform:rotate(0)}
 .faq-body{overflow:hidden}
-.faq-body p{padding:0 0 24px;max-width:60ch}
+.faq-body p{padding:0 0 20px}
 @media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
 
-/* ---------- Closing ---------- */
+/* Closing */
 .closing{background:var(--blue);color:#E3EEFC}
-.closing-inner{display:grid;grid-template-columns:1fr auto;gap:28px 48px;align-items:center}
-.closing h2{color:#fff;max-width:18em}
-.closing p{margin-top:12px;font-size:var(--step-1);line-height:1.5}
-.closing .btn-primary:hover{background:#fff}
+.closing-inner{display:grid;grid-template-columns:1fr auto;gap:24px 48px;align-items:center}
+.closing h2{color:#fff}
+.closing p{margin-top:10px;font-size:var(--t-md)}
+.closing .btn-primary:hover{background:#fff;box-shadow:0 8px 18px rgba(0,0,0,.18)}
 @media (max-width:760px){.closing-inner{grid-template-columns:1fr}}
 
-/* ---------- Footer ---------- */
-.site-footer{padding:44px 0 36px;font-size:var(--step--1);color:var(--ink-3)}
-.footer-row{display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center}
-.footer-row .brand{font-size:1rem;margin-right:auto}
+/* Footer */
+.site-footer{padding:40px 0 34px;font-size:var(--t-sm);color:var(--ink-3)}
+.footer-row{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center}
+.footer-row .brand{font-size:1rem}
 .footer-row .brand img{width:28px}
 .footer-row a{text-decoration:none}
 .footer-row a:hover{color:var(--ink)}
-.disclaimer{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);max-width:80ch}
+.disclaimer{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);max-width:80ch}
 
-/* ---------- WhatsApp shortcut (appears after the hero) ---------- */
+/* WhatsApp shortcut */
 .wa-shortcut{position:fixed;right:20px;bottom:20px;z-index:30;display:inline-flex;align-items:center;gap:8px;padding:12px 16px 12px 14px;border-radius:999px;background:var(--wa);color:#fff;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:0 6px 18px rgba(18,38,61,.18);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease),background-color .2s}
 .wa-shortcut.is-shown{opacity:1;transform:none;pointer-events:auto}
 .wa-shortcut:hover{background:#178444}
 .wa-shortcut svg{width:20px;height:20px}
 @media (max-width:560px){.wa-shortcut span{display:none}.wa-shortcut{padding:13px}}
 
-/* ---------- Hero load sequence (the one orchestrated moment) ---------- */
-.js .hero-copy > *{opacity:0;transform:translateY(10px)}
-.js .hero.ready .hero-copy > *{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.js .hero.ready .hero-copy > :nth-child(2){transition-delay:.08s}
-.js .hero.ready .hero-copy > :nth-child(3){transition-delay:.16s}
-.js .hero.ready .hero-copy > :nth-child(4){transition-delay:.24s}
-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
-  .js .hero-copy > *{opacity:1;transform:none}
+  .js .hero-copy > *,.js .reveal,.js .hero-photo img{opacity:1;transform:none}
   .js .rise path{stroke-dashoffset:0}
-  .js .steps:not(.is-visible){--progress:1}
+  .js .steps:not(.in){--progress:1}
 }
 </style>
 <script>document.documentElement.classList.add('js')</script>
@@ -275,12 +301,12 @@ p{max-width:64ch}
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="team">Team</span></span></a>
+    <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="tm">Team</span></span></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links">
         <li><a href="#model">The 2-in-1 model</a></li>
-        <li><a href="#how">How joining works</a></li>
-        <li><a href="#leader">Team leader</a></li>
+        <li><a href="#proof">Payments</a></li>
+        <li><a href="#team">Our team</a></li>
         <li><a href="#faq">Questions</a></li>
       </ul>
     </nav>
@@ -293,18 +319,19 @@ p{max-width:64ch}
 
 <main id="top">
 
+<!-- ============ Hero ============ -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-inner">
     <div class="hero-copy">
       <h1 id="hero-title">Earn as a freelancer. Use it to build your own business.</h1>
-      <p class="lede">Assurgent Team is a 2-in-1 business. You learn a freelancing skill that pays you now, then use part of that income to grow a network marketing business, with a team guiding you at every step.</p>
+      <p class="lede">Learn a skill that pays you now. Then grow a network marketing business for bigger earnings in the long run.</p>
       <div class="hero-actions">
         <a class="btn btn-primary wa-link" data-msg="Hi Assurgent Team, I'd like to join. Where do I start?" href="https://wa.me/2348100766324">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
           Message us on WhatsApp</a>
-        <a class="link" href="#model">See how the model works</a>
+        <a class="link" href="#model">How it works</a>
       </div>
-      <p class="hero-note">No experience or device needed. You can work on the devices at our office.</p>
+      <p class="hero-note">No experience or device needed. Use ours at the office.</p>
     </div>
     <figure class="hero-photo">
       <picture>
@@ -314,127 +341,164 @@ p{max-width:64ch}
       </picture>
       <figcaption><b>Yusuf Adebayo (Yuzzy)</b>Team leader</figcaption>
     </figure>
-  <svg class="rise" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-    <path class="line" d="M0 596 C 300 594, 470 580, 504 470 S 512 160, 516 58"/>
-    <path class="head" d="M498 84 L516 56 L534 84"/>
-  </svg>
+    <svg class="rise" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+      <path class="line" d="M0 596 C 300 594, 470 580, 504 470 S 512 160, 516 58"/>
+      <path class="head" d="M498 84 L516 56 L534 84"/>
+    </svg>
   </div>
-
 </section>
 
+<!-- ============ Where we get paid (moving strip) ============ -->
+<div class="platforms" aria-label="Where our members get paid">
+  <div class="platforms-row">
+    <span class="platforms-label">Where we get paid</span>
+    <div class="marquee">
+      <ul>
+        <li><i></i>Fiverr</li><li><i></i>Upwork</li><li><i></i>Freelancer.com</li><li><i></i>Direct clients</li>
+        <li class="pay"><i></i>Remitly</li><li class="pay"><i></i>Sendwave</li><li class="pay"><i></i>Taptap Send</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li><i></i>Fiverr</li><li><i></i>Upwork</li><li><i></i>Freelancer.com</li><li><i></i>Direct clients</li>
+        <li class="pay"><i></i>Remitly</li><li class="pay"><i></i>Sendwave</li><li class="pay"><i></i>Taptap Send</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2-in-1 model ============ -->
 <section class="section section--mist" id="model" aria-labelledby="model-title">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="model-title">One business, two parts that work together</h2>
-      <p>Freelancing gives you an income now. Part of that income funds a network marketing business, which is the part designed to grow into larger earnings over the long run as your team grows.</p>
+    <div class="section-head reveal">
+      <h2 id="model-title">One business, two parts</h2>
+      <p>Freelancing pays you now. Network marketing builds your long-term income.</p>
     </div>
-    <div class="paths">
-      <article class="path">
-        <span class="path-tag">First: earn</span>
+    <div class="model">
+      <article class="part reveal">
+        <span class="part-tag">First: earn</span>
         <h3>Freelancing</h3>
-        <p>Sell a skill such as writing, design or tech support to clients around the world, on your own device or at our office.</p>
+        <p>We teach you a skill clients pay for and show you how to sell it.</p>
         <ul>
-          <li>Learn a skill clients are already paying for</li>
-          <li>Set up a Fiverr profile and gigs that get noticed</li>
-          <li>Win and deliver your first orders properly</li>
-          <li>Receive payments and withdraw them safely</li>
+          <li>Orders on Fiverr, Upwork and Freelancer.com</li>
+          <li>Direct international clients</li>
+          <li>Paid via Remitly, Sendwave and Taptap Send</li>
         </ul>
       </article>
-      <div class="bridge" aria-hidden="true">
+      <div class="bridge reveal" style="--i:1" aria-hidden="true">
         <svg viewBox="0 0 64 24"><path d="M2 12h56M48 3l10 9-10 9"/></svg>
-        <span>Your earnings fund the next part</span>
+        <span>Earnings fund the next part</span>
       </div>
-      <article class="path">
-        <span class="path-tag">Then: build for the long run</span>
+      <article class="part part--build reveal" style="--i:2">
+        <span class="part-tag">Then: build</span>
         <h3>Network marketing</h3>
-        <p>Use part of your freelancing income to start a network marketing business. It takes longer to build, but as your team grows it can become a bigger source of income than freelancing alone.</p>
+        <p>Use part of your income to grow a business and a team of your own.</p>
         <ul>
-          <li>Understand how the business actually works</li>
-          <li>Share products honestly, online and offline</li>
-          <li>Build and support a team of your own</li>
-          <li>Learn from leaders who are already doing it</li>
+          <li>Learn how the business works</li>
+          <li>Build and support your own team</li>
+          <li>Grow bigger earnings over time</li>
         </ul>
       </article>
     </div>
-    <div class="model-why">
-      <p><b>Why freelancing comes first.</b> Network marketing is where the bigger, long-term earnings can come from, but it takes money and time to build. When your freelancing pays for it, you don't have to borrow or use your savings, and you still have an income while the business grows.</p>
-      <a class="btn btn-primary wa-link" data-msg="Hi Assurgent Team, I'd like to learn more about the 2-in-1 model." href="https://wa.me/2348100766324">Ask how it works</a>
-    </div>
+    <p class="model-note reveal"><b>Why freelancing first?</b> You fund your business without borrowing or touching your savings.</p>
   </div>
 </section>
 
+<!-- ============ Steps ============ -->
 <section class="section" id="how" aria-labelledby="how-title">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="how-title">What happens after you message us</h2>
-    </div>
-    <ol class="steps">
-      <li class="step"><h3>Say hello</h3><p>Send a WhatsApp message with your name and what you'd like to achieve.</p></li>
-      <li class="step"><h3>Learn a paying skill</h3><p>We teach you a freelancing skill that clients pay for, and show you exactly how to make money from it.</p></li>
-      <li class="step"><h3>Start earning</h3><p>You set up on Fiverr and work towards your first orders, with someone to check in with as you go.</p></li>
-      <li class="step"><h3>Build for the long run</h3><p>Once your freelancing is bringing in money, you put part of it into your network marketing business and grow your team for bigger earnings over time.</p></li>
+    <div class="section-head reveal"><h2 id="how-title">How you start</h2></div>
+    <ol class="steps reveal">
+      <li class="step"><h3>Message us</h3><p>Say hello on WhatsApp.</p></li>
+      <li class="step"><h3>Learn a paying skill</h3><p>We teach you and show you how to earn from it.</p></li>
+      <li class="step"><h3>Start earning</h3><p>Get your first orders and payments.</p></li>
+      <li class="step"><h3>Build for the long run</h3><p>Grow your network marketing business.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section leader" id="leader" aria-labelledby="leader-title">
-  <div class="wrap leader-grid">
-    <figure class="leader-photo">
-      <img src="/yuzzy-square.jpg" alt="Portrait of Yusuf Adebayo (Yuzzy)" width="860" height="860" loading="lazy">
-      <figcaption>Yusuf Adebayo (Yuzzy), team leader</figcaption>
-    </figure>
-    <div>
-      <h2 id="leader-title">Meet Yuzzy, our team leader</h2>
-      <p class="role">Computer Science student, software developer, researcher, freelancer, entrepreneur and network marketing team leader.</p>
-      <p>Yusuf Adebayo, known as Yuzzy, is a Computer Science student working towards First-Class Honours and a former student of <strong>SQI College of ICT</strong>. He is passionate about technology, innovation and academic excellence, with particular interest in software engineering, artificial intelligence and emerging technologies.</p>
-      <p>Outside the classroom he works as a freelancer and entrepreneur, and leads a network marketing team. That is where he builds teams, mentors individuals and creates opportunities for people to grow.</p>
-      <p>He believes in continuous learning, discipline, teamwork and the pursuit of excellence, and his aim is to become a successful technology professional, entrepreneur and leader. Those same values shape how Assurgent Team works.</p>
-      <blockquote class="creed">
-        <p>Think beyond limitations. Build beyond expectations. Lead by example. Never stop becoming better.</p>
-        <footer>Yuzzy's personal philosophy</footer>
-      </blockquote>
+<!-- ============ Proof ============
+  Screenshots: proof-1.jpg ... proof-12.jpg. To add more, copy a <figure class="shot"> line. -->
+<section class="section section--mist" id="proof" aria-labelledby="proof-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 id="proof-title">Payments from our team</h2>
+      <p>Real orders and payments, posted by members in our team group. Tap to enlarge.</p>
     </div>
+    <div class="proof-wrap reveal">
+    <div class="proof-grid" tabindex="0" aria-label="Payment screenshots">
+      <figure class="shot"><img src="/proof-1.jpg" alt="$400 via Remitly" width="720" height="666" loading="lazy"><figcaption>$400 via Remitly</figcaption></figure>
+      <figure class="shot"><img src="/proof-2.jpg" alt="New Fiverr order" width="720" height="628" loading="lazy"><figcaption>New Fiverr order</figcaption></figure>
+      <figure class="shot"><img src="/proof-3.jpg" alt="₦742,890 delivered" width="720" height="767" loading="lazy"><figcaption>₦742,890 delivered</figcaption></figure>
+      <figure class="shot"><img src="/proof-4.jpg" alt="Fiverr milestone order" width="720" height="1130" loading="lazy"><figcaption>Fiverr milestone order</figcaption></figure>
+      <figure class="shot"><img src="/proof-5.jpg" alt="$400 via Remitly" width="720" height="1172" loading="lazy"><figcaption>$400 via Remitly</figcaption></figure>
+      <figure class="shot"><img src="/proof-6.jpg" alt="£301 via Xoom" width="720" height="831" loading="lazy"><figcaption>£301 via Xoom</figcaption></figure>
+      <figure class="shot"><img src="/proof-7.jpg" alt="$250 via Remitly" width="720" height="931" loading="lazy"><figcaption>$250 via Remitly</figcaption></figure>
+      <figure class="shot"><img src="/proof-8.jpg" alt="$500 received" width="720" height="782" loading="lazy"><figcaption>$500 received</figcaption></figure>
+      <figure class="shot"><img src="/proof-9.jpg" alt="£88 received" width="720" height="1174" loading="lazy"><figcaption>£88 received</figcaption></figure>
+      <figure class="shot"><img src="/proof-10.jpg" alt="Two new orders" width="720" height="824" loading="lazy"><figcaption>Two new orders</figcaption></figure>
+      <figure class="shot"><img src="/proof-11.jpg" alt="$100 milestone" width="720" height="543" loading="lazy"><figcaption>$100 milestone</figcaption></figure>
+      <figure class="shot"><img src="/proof-12.jpg" alt="First PCs from the business" width="720" height="816" loading="lazy"><figcaption>First PCs from the business</figcaption></figure>
+    </div>
+    <button class="proof-nav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="proof-nav next" type="button" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <p class="proof-note">Names and reference numbers are hidden. Results vary by person.</p>
   </div>
 </section>
 
-<section class="section" aria-labelledby="promise-title">
-  <div class="wrap promises">
-    <div>
-      <h2 id="promise-title">What you can expect from us</h2>
+<!-- ============ Team ============
+  To add a member: upload their photo as team-1.jpg ... team-4.jpg
+  and change the name and role under it. -->
+<section class="section team" id="team" aria-labelledby="team-title">
+  <div class="wrap">
+    <div class="section-head reveal"><h2 id="team-title">Our team</h2></div>
+
+    <div class="leader">
+      <figure class="leader-photo reveal"><img src="/yuzzy-square.jpg" alt="Yusuf Adebayo (Yuzzy)" width="860" height="860" loading="lazy"></figure>
+      <div class="reveal" style="--i:1">
+        <span class="leader-tag">Team leader</span>
+        <h3 class="leader-name">Yusuf Adebayo (Yuzzy)</h3>
+        <p class="role">Computer Science student · Software developer · Freelancer · Network marketing leader</p>
+        <p>Yuzzy is working towards First-Class Honours in Computer Science and studied at <strong>SQI College of ICT</strong>.</p>
+        <p>He freelances, builds teams and mentors people to grow their income.</p>
+        <p class="creed">Think beyond limitations. Build beyond expectations. Lead by example. Never stop becoming better.</p>
+      </div>
     </div>
-    <dl>
-      <div class="promise"><dt>Straight answers</dt><dd>We'll be honest about how much work freelancing and the business take. There are no shortcuts, and we won't pretend otherwise.</dd></div>
-      <div class="promise"><dt>People who reply</dt><dd>You're not left alone with a pile of videos. Ask a question and a team member will get back to you.</dd></div>
-      <div class="promise"><dt>A team, not a course</dt><dd>Members help each other. As you grow, you'll be encouraged to pass on what you've learned.</dd></div>
-    </dl>
+
+    <!-- Team members: upload team-1.jpg ... team-4.jpg, then put the name in <b> and the role in <span>. -->
+    <ul class="members" aria-label="Team members">
+      <li class="member reveal" style="--i:0"><figure><div class="pic"><img src="/team-1.jpg" alt=""></div><figcaption><b></b><span></span></figcaption></figure></li>
+      <li class="member reveal" style="--i:1"><figure><div class="pic"><img src="/team-2.jpg" alt=""></div><figcaption><b></b><span></span></figcaption></figure></li>
+      <li class="member reveal" style="--i:2"><figure><div class="pic"><img src="/team-3.jpg" alt=""></div><figcaption><b></b><span></span></figcaption></figure></li>
+      <li class="member reveal" style="--i:3"><figure><div class="pic"><img src="/team-4.jpg" alt=""></div><figcaption><b></b><span></span></figcaption></figure></li>
+    </ul>
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
 <section class="section section--mist" id="faq" aria-labelledby="faq-title">
   <div class="wrap faq-grid">
-    <div class="faq-side">
-      <h2 id="faq-title">Questions people ask before joining</h2>
-      <p>Something else on your mind?</p>
+    <div class="faq-side reveal">
+      <h2 id="faq-title">Questions</h2>
       <a class="link wa-link" data-msg="Hi Assurgent Team, I have a question before joining." href="https://wa.me/2348100766324">Ask us on WhatsApp</a>
     </div>
-    <div class="faq-list">
-      <details class="faq-item"><summary>Do I need any experience?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>No. Many members start as complete beginners. We teach you a skill that pays and guide you step by step on how to earn from it.</p></div></details>
-      <details class="faq-item"><summary>Do I need my own phone or laptop?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Just the willingness to learn and stay consistent. If you don't have a phone or laptop, you can work on the devices available at our office.</p></div></details>
-      <details class="faq-item"><summary>How soon will I start earning?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>That depends on your skill, your effort and the time you put in. We don't promise specific earnings. We do promise clear guidance and support while you do the work.</p></div></details>
-      <details class="faq-item"><summary>Why start with freelancing?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Growing a network marketing business has costs. Freelancing gives you your own income to cover them, so you don't need to borrow or spend your savings, and you keep earning while the business grows.</p></div></details>
-      <details class="faq-item"><summary>Do I have to do both?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>The 2-in-1 model is how Assurgent Team works, and it's what we coach. Message us and we'll talk through how it fits your situation.</p></div></details>
-      <details class="faq-item"><summary>How do I join?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Send us a message on WhatsApp. Yuzzy or a team member will reply and guide you from there.</p></div></details>
+    <div class="faq-list reveal" style="--i:1">
+      <details class="faq-item"><summary>Do I need experience?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>No. We teach you a paying skill from scratch.</p></div></details>
+      <details class="faq-item"><summary>Do I need a phone or laptop?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>No. You can use the devices at our office.</p></div></details>
+      <details class="faq-item"><summary>Why freelancing first?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>It gives you income to fund your network marketing business without borrowing.</p></div></details>
+      <details class="faq-item"><summary>How soon will I earn?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>It depends on your effort and time. We guide you all the way, but we don't promise amounts.</p></div></details>
+      <details class="faq-item"><summary>How do I join?<span class="icon" aria-hidden="true"></span></summary><div class="faq-body"><p>Send us a message on WhatsApp and we'll take it from there.</p></div></details>
     </div>
   </div>
 </section>
 
+<!-- ============ Closing ============ -->
 <section class="section closing" aria-labelledby="closing-title">
-  <div class="wrap closing-inner">
+  <div class="wrap closing-inner reveal">
     <div>
-      <h2 id="closing-title">Ready to start earning and building?</h2>
-      <p>Tell us where you are now and where you'd like to be. We'll show you the skill you'll learn and how you'll start earning from it.</p>
+      <h2 id="closing-title">Ready to start earning?</h2>
+      <p>Message us and we'll show you the first step.</p>
     </div>
-    <a class="btn btn-primary wa-link" data-msg="Hi Assurgent Team, I'm ready to start. Can you help me with the first step?" href="https://wa.me/2348100766324">
+    <a class="btn btn-primary wa-link" data-msg="Hi Assurgent Team, I'm ready to start. What's the first step?" href="https://wa.me/2348100766324">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
       Message us on WhatsApp</a>
   </div>
@@ -445,11 +509,11 @@ p{max-width:64ch}
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-row">
-      <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="team">Team</span></span></a>
+      <a href="#top" class="brand"><img src="/mark.png" alt="" width="240" height="188"><span class="word"><span class="assur">Assur</span><span class="gent">gent</span><span class="tm">Team</span></span></a>
       <a class="wa-link" data-msg="Hi Assurgent Team" href="https://wa.me/2348100766324">WhatsApp +234 810 076 6324</a>
       <span>&copy; <span id="year">2026</span> Assurgent Team</span>
     </div>
-    <p class="disclaimer">Results vary from person to person and depend on individual effort, skill and time invested. Assurgent Team provides training and mentorship and does not guarantee any level of income. Network marketing can involve buying products and other costs; only commit money you can afford.</p>
+    <p class="disclaimer">Results vary and depend on individual effort. We provide training and mentorship and do not guarantee income. Network marketing can involve buying products; only commit what you can afford.</p>
   </div>
 </footer>
 
@@ -457,6 +521,8 @@ p{max-width:64ch}
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
   <span>Chat with us</span>
 </a>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot"><button type="button" aria-label="Close">&times;</button><img alt=""></div>
 
 <script>
 (function(){
@@ -470,57 +536,58 @@ p{max-width:64ch}
   });
   document.getElementById('year').textContent=new Date().getFullYear();
 
-  // Header border on scroll, WhatsApp shortcut after the hero
-  var header=document.querySelector('.site-header');
-  var hero=document.querySelector('.hero');
-  var shortcut=document.querySelector('.wa-shortcut');
-  function onScroll(){
-    header.classList.toggle('is-scrolled',scrollY>4);
-    shortcut.classList.toggle('is-shown',scrollY>hero.offsetHeight*.8);
+  // Team photos and proof screenshots: show a placeholder until the file is uploaded
+  function watch(img,box){
+    function empty(){box.classList.add('is-empty');}
+    img.addEventListener('error',empty);
+    if(img.complete && !img.naturalWidth) empty();
   }
+  document.querySelectorAll('.member').forEach(function(li){watch(li.querySelector('img'),li);});
+
+  // Header border, WhatsApp shortcut after the hero
+  var header=document.querySelector('.site-header'),hero=document.querySelector('.hero'),shortcut=document.querySelector('.wa-shortcut');
+  function onScroll(){header.classList.toggle('is-scrolled',scrollY>4);shortcut.classList.toggle('is-shown',scrollY>hero.offsetHeight*.8);}
   addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   // Mobile menu
   var btn=document.querySelector('.menu-btn'),links=document.getElementById('nav-links');
-  btn.addEventListener('click',function(){
-    var open=links.classList.toggle('is-open');btn.setAttribute('aria-expanded',open);
-  });
-  links.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){links.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}
-  });
+  btn.addEventListener('click',function(){var o=links.classList.toggle('is-open');btn.setAttribute('aria-expanded',o);});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
 
-  // Hero: copy settles in, then the rising line draws across
+  // Hero entrance and rising line
   var rise=document.querySelector('.rise');
-  rise.querySelectorAll('path').forEach(function(p){
-    var l=Math.ceil(p.getTotalLength()*1.6); p.style.setProperty('--len',l);
-  });
-  requestAnimationFrame(function(){requestAnimationFrame(function(){
-    hero.classList.add('ready'); rise.classList.add('draw');
-  });});
+  rise.querySelectorAll('path').forEach(function(p){p.style.setProperty('--len',Math.ceil(p.getTotalLength()*1.6));});
+  requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add('ready');rise.classList.add('draw');});});
 
-  // Steps: the connecting line fills when the sequence comes into view
-  var steps=document.querySelector('.steps');
+  // Scroll reveals (also fills the steps line)
+  var items=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window && !reduce){
-    new IntersectionObserver(function(es,o){
-      es.forEach(function(e){if(e.isIntersecting){steps.classList.add('is-visible');o.disconnect();}});
-    },{threshold:.4}).observe(steps);
-  } else steps.classList.add('is-visible');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){io.observe(el);});
+  } else items.forEach(function(el){el.classList.add('in');});
 
-  // FAQ: animate open/close height, keep one open at a time
+  // FAQ: smooth open/close, one at a time
   document.querySelectorAll('.faq-item').forEach(function(d){
     var s=d.querySelector('summary'),b=d.querySelector('.faq-body');
     s.addEventListener('click',function(e){
-      if(reduce) return;
-      e.preventDefault();
-      if(d.open){
-        b.animate([{height:b.offsetHeight+'px'},{height:'0px'}],{duration:260,easing:'cubic-bezier(.2,.7,.2,1)'}).onfinish=function(){d.open=false;};
-      }else{
-        document.querySelectorAll('.faq-item[open]').forEach(function(o){if(o!==d)o.open=false;});
-        d.open=true;var h=b.offsetHeight;
-        b.animate([{height:'0px'},{height:h+'px'}],{duration:300,easing:'cubic-bezier(.2,.7,.2,1)'});
-      }
+      if(reduce) return; e.preventDefault();
+      if(d.open){b.animate([{height:b.offsetHeight+'px'},{height:'0px'}],{duration:240,easing:'ease-out'}).onfinish=function(){d.open=false;};}
+      else{document.querySelectorAll('.faq-item[open]').forEach(function(o){if(o!==d)o.open=false;});d.open=true;var h=b.offsetHeight;b.animate([{height:'0px'},{height:h+'px'}],{duration:300,easing:'cubic-bezier(.2,.7,.2,1)'});}
     });
   });
+
+  // Proof gallery arrows
+  var pg=document.querySelector('.proof-grid');
+  document.querySelectorAll('.proof-nav').forEach(function(b){b.addEventListener('click',function(){pg.scrollBy({left:(b.classList.contains('next')?1:-1)*pg.clientWidth*.8,behavior:'smooth'});});});
+
+  // Screenshot viewer
+  var lb=document.querySelector('.lightbox'),lbImg=lb.querySelector('img');
+  document.querySelectorAll('.shot').forEach(function(f){
+    f.addEventListener('click',function(){lbImg.src=f.querySelector('img').src;lb.classList.add('open');});
+  });
+  function close(){lb.classList.remove('open');}
+  lb.addEventListener('click',function(e){if(e.target!==lbImg)close();});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
 </script>
 </body>
